@@ -1,39 +1,40 @@
 "use client";
 
 import React from "react";
-import { Upload, Zap, Target } from "lucide-react";
+// import { Upload, Zap, Target } from "lucide-react";
 import SenjuButton from "@/components/ui/senju-btn";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { PhoneCall, Zap, CheckCircle } from "lucide-react";
 
 const HowItWorksSection = () => {
   const steps = [
     {
       number: "1.",
-      title: "Upload Your Data",
+      title: "Create Your Agent",
       description:
-        "Simply upload your data to our secure platform. We support various file formats and data types to ensure a seamless integration with your existing systems.",
-      icon: Upload,
-      iconBg: "bg-red-50",
+        "Log in and build your personal AI agent in minutes. Customize voice, tone, and behavior the way you like.",
+      icon: PhoneCall,
+      iconBg: "bg-violet-50",
       iconColor: "text-violet-500",
       borderColor: "border-violet-500",
     },
     {
       number: "2.",
-      title: "Click Start",
+      title: "Chat & Schedule",
       description:
-        "Our advanced AI algorithms automatically process and analyze your data, extracting valuable insights and patterns that would be difficult to identify manually.",
+        "Start real-time conversations with your AI or let it organize meetings for you, all from your dashboard.",
       icon: Zap,
-      iconBg: "bg-red-50",
+      iconBg: "bg-violet-50",
       iconColor: "text-violet-500",
       borderColor: "border-violet-500",
     },
     {
       number: "3.",
-      title: "Get Actionable Insights",
+      title: "Stay in Control",
       description:
-        "Receive clear, actionable insights and recommendations based on the AI analysis. Use these insights to make data-driven decisions and improve your business strategies.",
-      icon: Target,
-      iconBg: "bg-red-50",
+        "Only you can manage agents and meetings. Adjust settings anytime and keep your AI working exactly as you want.",
+      icon: CheckCircle,
+      iconBg: "bg-violet-50",
       iconColor: "text-violet-500",
       borderColor: "border-violet-500",
     },
@@ -77,25 +78,28 @@ const HowItWorksSection = () => {
 
           <div className="lg:pl-8 hidden md:block">
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+              {/* Browser Header */}
               <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   <div className="ml-4 bg-white rounded px-3 py-1 text-xs text-gray-500 flex-1">
-                    dashboard.ai-platform.com
+                    dashboard.neurowolf.ai
                   </div>
                 </div>
               </div>
 
+              {/* Dashboard Content */}
               <div className="p-6">
+                {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">
-                      Inbox
+                      Call Center
                     </h3>
                     <p className="text-sm text-gray-500">
-                      AI Insights - Discover
+                      AI Voice Agents Overview
                     </p>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -105,82 +109,87 @@ const HowItWorksSection = () => {
                   </div>
                 </div>
 
+                {/* Navigation */}
                 <div className="flex items-center space-x-6 mb-6 text-sm">
-                  <span className="text-gray-900 font-medium border-b-2 border-blue-500 pb-1">
-                    Data
+                  <span className="text-gray-900 font-medium border-b-2 border-violet-500 pb-1">
+                    Agents
                   </span>
-                  <span className="text-gray-500">Insights</span>
-                  <span className="text-gray-500">Reports</span>
+                  <span className="text-gray-500">Calls</span>
+                  <span className="text-gray-500">Analytics</span>
                   <span className="text-gray-500">Settings</span>
                 </div>
 
+                {/* Stats Grid */}
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-4">
+                    {/* Agents Status */}
                     <div className="bg-gray-50 rounded-lg p-4">
                       <div className="flex items-center justify-between mb-2">
                         <div className="text-sm font-medium text-gray-900">
-                          Data Sources
+                          Active Agents
                         </div>
-                        <div className="text-xs text-gray-500">23</div>
+                        <div className="text-xs text-gray-500">8</div>
                       </div>
                       <div className="space-y-2">
-                        <div className="h-2 bg-blue-200 rounded w-3/4"></div>
+                        <div className="h-2 bg-violet-200 rounded w-3/4"></div>
                         <div className="h-2 bg-green-200 rounded w-1/2"></div>
-                        <div className="h-2 bg-purple-200 rounded w-5/6"></div>
+                        <div className="h-2 bg-blue-200 rounded w-5/6"></div>
                       </div>
                     </div>
 
+                    {/* Call Status */}
                     <div className="bg-gray-50 rounded-lg p-4">
                       <div className="text-sm font-medium text-gray-900 mb-2">
-                        Processing Status
+                        Call Status
                       </div>
                       <div className="space-y-2">
                         <div className="flex justify-between text-xs">
-                          <span className="text-gray-600">Analytics</span>
-                          <span className="text-green-600">Complete</span>
+                          <span className="text-gray-600">Ongoing Calls</span>
+                          <span className="text-green-600">12</span>
                         </div>
                         <div className="flex justify-between text-xs">
-                          <span className="text-gray-600">ML Training</span>
-                          <span className="text-yellow-600">In Progress</span>
+                          <span className="text-gray-600">Queued Calls</span>
+                          <span className="text-yellow-600">4</span>
                         </div>
                         <div className="flex justify-between text-xs">
-                          <span className="text-gray-600">Reports</span>
-                          <span className="text-gray-400">Pending</span>
+                          <span className="text-gray-600">Missed Calls</span>
+                          <span className="text-red-600">1</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
+                  {/* Recent Conversations */}
                   <div className="space-y-4">
-                    <div className="bg-blue-50 rounded-lg p-4">
+                    <div className="bg-violet-50 rounded-lg p-4">
                       <div className="text-sm font-medium text-gray-900 mb-2">
-                        Recent Insights
+                        Recent Conversations
                       </div>
                       <div className="space-y-3">
                         <div className="bg-white rounded p-3 shadow-sm">
                           <div className="text-xs font-medium text-gray-900 mb-1">
-                            Customer Behavior
+                            Booking Assistant
                           </div>
                           <div className="text-xs text-gray-600">
-                            Increase in mobile usage detected
+                            Booked 2 appointments successfully
                           </div>
                           <div className="mt-2 flex items-center space-x-2">
                             <div className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">
-                              High Impact
+                              Completed
                             </div>
                           </div>
                         </div>
 
                         <div className="bg-white rounded p-3 shadow-sm">
                           <div className="text-xs font-medium text-gray-900 mb-1">
-                            Sales Trend
+                            Sales Agent
                           </div>
                           <div className="text-xs text-gray-600">
-                            Q4 performance exceeding targets
+                            Follow-up call scheduled with lead
                           </div>
                           <div className="mt-2 flex items-center space-x-2">
                             <div className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">
-                              Medium Impact
+                              In Progress
                             </div>
                           </div>
                         </div>
@@ -189,18 +198,15 @@ const HowItWorksSection = () => {
                   </div>
                 </div>
 
+                {/* Footer */}
                 <div className="mt-6 flex justify-between items-center">
                   <div className="text-xs text-gray-500">
                     Last updated 2 minutes ago
                   </div>
-                  {/* <button className="px-4 py-2 bg-blue-500 text-white text-xs rounded-lg hover:bg-blue-600 transition-colors">
-                    Generate Report
-                  </button> */}
-                  {/* <SenjuButton>Generate Report</SenjuButton> */}
-                  {/* <RainbowButton variant="outline">Generate Report</RainbowButton> */}
+
                   <a href="/" target="_blank" rel="noopener noreferrer">
                     <RainbowButton variant="outline">
-                      Generate Report
+                      Add New Agent
                     </RainbowButton>
                   </a>
                 </div>

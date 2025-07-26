@@ -12,15 +12,14 @@ function SolutionSection() {
             </span>
           </div>
           <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-balance">
-            Empower Your Business with AI Workflows.
+            Automate Conversations with AI Agents.
           </h2>
-          <p className="text-lg md:text-balance pt-5 text-center md:max-w-[80%] mx-auto leading-relaxed text-gray-500">
-            Generic AI tools won't suffice. Our platform is purpose-built to
-            provide exceptional AI-driven solutions for your unique business
-            needs.
+          <p className="text-md md:text-balance pt-5 text-center md:max-w-[80%] mx-auto leading-relaxed text-gray-500">
+            Build AI voice agents to handle calls, book appointments, and answer
+            questions — 24/7.
           </p>
         </div>
-        <div>
+        <div className="max-w-5xl mx-auto">
           <BentoCards />
         </div>
       </div>

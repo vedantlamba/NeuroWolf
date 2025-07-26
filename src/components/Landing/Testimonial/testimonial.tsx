@@ -5,38 +5,31 @@ import React, { useEffect, useState } from "react";
 const demoTestimonials = [
   {
     quote:
-      "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-    name: "Sarah Chen",
-    designation: "Product Manager at TechFlow",
-    src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Neurowolf feels like having my own AI assistant. I can create agents, schedule meetings, and chat with them whenever I need.",
+    name: "Thomas Shelby",
+    designation: "Founder at Shelby Enterprises",
+    src: "https://c.files.bbci.co.uk/5899/live/b341ab20-2317-11ef-96c3-99f9322e70a9.jpg",
   },
   {
     quote:
-      "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-    name: "Michael Rodriguez",
-    designation: "CTO at InnovateSphere",
-    src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Everything is under my control. I talk to my AI agents, set up meetings, and get things done—without relying on anyone else.",
+    name: "Arthur Shelby",
+    designation: "Independent Consultant",
+    src: "https://thechap.co.uk/wp-content/uploads/2023/09/paul-anderson-920x1024.jpg",
   },
   {
     quote:
-      "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-    name: "Emily Watson",
-    designation: "Operations Director at CloudScale",
-    src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "Instead of juggling tools, I just log into Neurowolf and manage everything from one place. It’s my personal AI workspace.",
+    name: "Polly Gray",
+    designation: "Operations Director at Gray Solutions",
+    src: "https://ichef.bbci.co.uk/images/ic/480xn/p07l6cgl.jpg",
   },
   {
     quote:
-      "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-    name: "James Kim",
-    designation: "Engineering Lead at DataPro",
-    src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    quote:
-      "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    name: "Lisa Thompson",
-    designation: "VP of Technology at FutureNet",
-    src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "I can chat with my AI agents any time and use them to plan and run meetings. It’s like having a 24/7 assistant just for me.",
+    name: "John Shelby",
+    designation: "Freelancer & Business Coach",
+    src: "https://i.pinimg.com/564x/3b/f9/52/3bf95269083f26ddce72b275dc27f3f5.jpg",
   },
 ];
 

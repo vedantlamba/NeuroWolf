@@ -18,9 +18,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Data Overload",
+      title: "Manual Interaction",
       description:
-        "Businesses struggle to make sense of vast amounts of complex data, missing out on valuable insights that could drive growth.",
+        "Handling every customer call manually takes time.\nYour team gets overwhelmed.\nGrowth slows down.",
     },
     {
       icon: (
@@ -38,9 +38,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Slow Decision-Making",
+      title: "Missed Engagement",
       description:
-        "Traditional data processing methods are too slow, causing businesses to lag behind market changes and miss crucial opportunities.",
+        "Leads drop off when no one responds fast.\nLost chances hurt revenue.\nEvery second counts.",
     },
     {
       icon: (
@@ -58,9 +58,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Data Security Concerns",
+      title: "AI Trust Issues",
       description:
-        "With increasing cyber threats, businesses worry about the safety of their sensitive information when adopting new technologies.",
+        "Businesses fear AI making mistakes.\nData security is a concern.\nTrust is non-negotiable.",
     },
   ];
 
@@ -75,7 +75,7 @@ const ProblemSection = () => {
             </span>
           </div>
           <h2 className="mt-6 text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight text-balance">
-            Manually entering your data is a hassle.
+            Manual Customer Interaction is a Hassle
           </h2>
         </div>
 

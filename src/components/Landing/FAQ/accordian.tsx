@@ -14,38 +14,38 @@ export function FaqAccordian() {
       defaultValue="item-1"
     >
       <AccordionItem value="item-1">
-        <AccordionTrigger>What is NeuroWolf</AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <AccordionTrigger>What is Neurowolf?</AccordionTrigger>
+        <AccordionContent className="flex flex-col gap-4 px-3">
           <p>
-            Neurowolf is a platform that helps you build and manage your
-            AI-powered applications. It provides tools and services to
-            streamline the development and deployment of AI solutions.
+            Neurowolf is your personal AI workspace. It lets you create custom
+            AI voice agents, chat with them in real time, and schedule meetings
+            — all in one place. Everything happens in your private account.
           </p>
         </AccordionContent>
       </AccordionItem>
+
       <AccordionItem value="item-2">
         <AccordionTrigger>
-          How can i get started with neurowolf.ai
+          How do I get started with Neurowolf?
         </AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <AccordionContent className="flex flex-col gap-4 px-3">
           <p>
-            You can get started with neurowolf.ai by signing up for an account
-            on our website, creating a new project, and following our
-            quick-start guide. We also offer tutorials and documentation to help
-            you along the way.
+            Getting started is simple: sign up, log in, and create your first AI
+            agent in minutes. From there, you can customize your agent, chat
+            with it, and use it to organize and run meetings.
           </p>
         </AccordionContent>
       </AccordionItem>
+
       <AccordionItem value="item-3">
         <AccordionTrigger>
-          What types of AI models does neurowolf.ai support?
+          Who can access my agents and meetings?
         </AccordionTrigger>
-        <AccordionContent className="flex flex-col gap-4 text-balance">
+        <AccordionContent className="flex flex-col gap-4 px-3">
           <p>
-            neurowolf.ai supports a wide range of AI models, including but not
-            limited to natural language processing, computer vision, and
-            predictive analytics. We continuously update our platform to support
-            the latest AI technologies.
+            Only you. Neurowolf is a single-user platform, meaning only you can
+            create agents, chat with them, and manage meetings. No one else has
+            access unless you share the meeting link.
           </p>
         </AccordionContent>
       </AccordionItem>

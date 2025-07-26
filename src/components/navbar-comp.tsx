@@ -64,7 +64,7 @@ export default function NavbarComponent() {
                   </svg>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-36 p-1 md:hidden">
+              <PopoverContent align="start" className="w-36 p-1 md:hidden z-150">
                 <NavigationMenu className="max-w-none *:w-full">
                   <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
                     {navigationLinks.map((link, index) => (
