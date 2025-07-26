@@ -8,6 +8,7 @@ import Testimonial from "./Testimonial/testimonial";
 import PricingSection from "./PricingSection/pricing-section";
 import Faqs from "./FAQ/faq";
 import Footer from "./Footer/footer";
+import Banner from "./Banner/banner";
 
 function LandingPage() {
   return (
@@ -15,6 +16,7 @@ function LandingPage() {
       <div>
         <Navbar />
       </div>
+
       <div>
         <Hero />
       </div>

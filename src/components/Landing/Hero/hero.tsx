@@ -30,6 +30,12 @@ function Hero() {
             No matter what problem you have, our AI can help you solve it.
           </p>
         </div>
+        <div className="mb-8">
+          <p className="mt-4 text-xs md:text-sm text-center text-primary font-medium bg-primary/10 rounded-lg px-4 py-2 inline-block text-balance ">
+             "Neurowolf AI is in development! Follow my progress on Twitter and
+            explore this landing page for now."
+          </p>
+        </div>
 
         <div className="mb-4">
           {/* <Button className="inline-flex items-center gap-2 px-8 py-4 text-base transition-all duration-200 cursor-pointer">
