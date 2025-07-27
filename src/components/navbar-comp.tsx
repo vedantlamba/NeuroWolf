@@ -13,6 +13,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { RainbowButton } from "./ui/rainbow-button";
+import AuthDialog from "./Landing/Navbar/components/auth-dialog";
 
 // Navigation links array to be used in both desktop and mobile menus
 const navigationLinks = [
@@ -24,11 +25,11 @@ const navigationLinks = [
 
 export default function NavbarComponent() {
   return (
-    <header className="border-b border-white/10 px-4 md:px-6 fixed w-screen backdrop-blur-xl bg-white/40 supports-[backdrop-filter]:bg-white/30 z-100 ">
+    <header className="border-b border-white/10 px-4 md:px-6 fixed w-screen backdrop-blur-xl bg-white/40 supports-[backdrop-filter]:bg-white/30 z-50 ">
       <div className="max-w-7xl mx-auto">
         <div className="flex h-16 items-center justify-between gap-4 ">
           {/* Left side */}
-          <div className="flex items-center gap-2 " >
+          <div className="flex items-center gap-2 ">
             {/* Mobile menu trigger */}
             <Popover>
               <PopoverTrigger asChild>
@@ -64,7 +65,10 @@ export default function NavbarComponent() {
                   </svg>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent align="start" className="w-36 p-1 md:hidden z-150">
+              <PopoverContent
+                align="start"
+                className="w-36 p-1 md:hidden z-150"
+              >
                 <NavigationMenu className="max-w-none *:w-full">
                   <NavigationMenuList className="flex-col items-start gap-0 md:gap-2">
                     {navigationLinks.map((link, index) => (
@@ -110,13 +114,8 @@ export default function NavbarComponent() {
             </div>
           </div>
           {/* Right side */}
-          <div className="flex items-center gap-2">
-            <Button asChild variant="ghost" size="sm" className="text-sm">
-              <a href="#">Sign In</a>
-            </Button>
-            <Button asChild size="sm" className="text-sm">
-              <a href="#">Get Started For Free</a>
-            </Button>
+          <div>
+            <AuthDialog />
           </div>
         </div>
       </div>
