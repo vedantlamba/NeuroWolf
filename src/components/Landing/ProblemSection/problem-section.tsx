@@ -18,9 +18,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Manual Interaction",
+      title: "Endless Scheduling Headaches",
       description:
-        "Handling every customer call manually takes time.\nYour team gets overwhelmed.\nGrowth slows down.",
+        "Coordinating meetings takes forever.\nBack-and-forth emails waste time.\nLeads drop before you even talk.",
     },
     {
       icon: (
@@ -38,9 +38,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Missed Engagement",
+      title: "Scaling Human Interaction",
       description:
-        "Leads drop off when no one responds fast.\nLost chances hurt revenue.\nEvery second counts.",
+        "Your team can’t talk to everyone.\nMissed calls = missed revenue.\nYou need a way to engage 24/7.",
     },
     {
       icon: (
@@ -58,14 +58,14 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "AI Trust Issues",
+      title: "Cold Conversations Kill Deals",
       description:
-        "Businesses fear AI making mistakes.\nData security is a concern.\nTrust is non-negotiable.",
+        "Generic emails don’t convert.\nProspects want real conversations.\nBut humans can’t scale like AI agents.",
     },
   ];
 
   return (
-    <section className="py-16 px-4 md:px-6 bg-white">
+    <section className="py-24 px-4 md:px-6 bg-white">
       <div className="max-w-7xl mx-auto text-wrap">
         {/* Section Header */}
         <div className="text-center mb-16">

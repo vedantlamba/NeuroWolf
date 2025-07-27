@@ -11,13 +11,13 @@ const PricingSection = () => {
       name: "BASIC",
       monthlyPrice: 19,
       yearlyPrice: 190, // ~17/month with discount
-      description: "Perfect for individuals and small projects",
+      description: "For solo professionals and small projects",
       features: [
-        "1 User",
-        "5GB Storage",
+        "1 AI Voice Agent",
+        "100 Minutes of Calls",
+        "Meeting Booking",
         "Basic Support",
-        "Limited API Access",
-        "Standard Analytics",
+        "Access to Standard Voices",
       ],
       popular: false,
       buttonStyle:
@@ -27,13 +27,13 @@ const PricingSection = () => {
       name: "PRO",
       monthlyPrice: 49,
       yearlyPrice: 490, // ~41/month with discount
-      description: "Ideal for growing businesses and teams",
+      description: "Perfect for startups and growing teams",
       features: [
-        "5 Users",
-        "50GB Storage",
+        "5 AI Voice Agents",
+        "1,000 Minutes of Calls",
+        "Advanced Meeting Scheduling",
         "Priority Support",
-        "Full API Access",
-        "Advanced Analytics",
+        "Customizable Voice Styles",
       ],
       popular: true,
       buttonStyle: "bg-violet-500 text-white hover:bg-violet-600",
@@ -42,13 +42,13 @@ const PricingSection = () => {
       name: "ENTERPRISE",
       monthlyPrice: 99,
       yearlyPrice: 990, // ~83/month with discount
-      description: "For large-scale operations and high-volume users",
+      description: "For agencies and high-volume businesses",
       features: [
-        "Unlimited Users",
-        "500GB Storage",
-        "24/7 Premium Support",
+        "Unlimited AI Voice Agents",
+        "10,000+ Minutes of Calls",
+        "Dedicated Account Manager",
         "Custom Integrations",
-        "AI-Powered Insights",
+        "AI Training for Brand Voice",
       ],
       popular: false,
       buttonStyle:
@@ -57,14 +57,14 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="pb-16 px-4 md:px-6 bg-gray-50">
+    <section className="py-16 px-4 md:px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-violet-500 text-sm font-medium tracking-wide uppercase mb-4">
             PRICING
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-balance">
             Choose the plan that's right for you
           </h2>
 

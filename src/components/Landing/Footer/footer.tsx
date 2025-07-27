@@ -42,7 +42,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white border-t border-gray-200 pb-14">
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -137,8 +137,8 @@ const Footer = () => {
         {/* Divider */}
         <div className="border-t border-gray-200 mt-12 pt-8">
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-600">
+          <div className="flex flex-col md:flex-row justify-center text-center items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-gray-600 text-balance">
               Copyright © 2025 neurowolf.ai - Automate your workflow with AI
             </div>
 

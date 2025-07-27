@@ -9,6 +9,7 @@ import PricingSection from "./PricingSection/pricing-section";
 import Faqs from "./FAQ/faq";
 import Footer from "./Footer/footer";
 import Banner from "./Banner/banner";
+import ProgressiveBlur from "../ui/progressive-blur";
 
 function LandingPage() {
   return (
@@ -40,6 +41,9 @@ function LandingPage() {
       </div>
       <div>
         <Footer />
+      </div>
+      <div>
+        <ProgressiveBlur height="15%" position="bottom" />
       </div>
     </div>
   );

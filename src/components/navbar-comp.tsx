@@ -27,10 +27,10 @@ export default function NavbarComponent() {
   return (
     <header className="border-b border-white/10 px-4 md:px-6 fixed w-screen backdrop-blur-xl bg-white/40 supports-[backdrop-filter]:bg-white/30 z-50 ">
       <div className="max-w-7xl mx-auto">
-        <div className="flex h-16 items-center justify-between gap-4 ">
-          {/* Left side */}
-          <div className="flex items-center gap-2 ">
-            {/* Mobile menu trigger */}
+        <div className="flex h-16 items-center justify-between gap-4">
+         
+          <div className="flex items-center gap-2">
+            
             <Popover>
               <PopoverTrigger asChild>
                 <Button
@@ -86,7 +86,7 @@ export default function NavbarComponent() {
                 </NavigationMenu>
               </PopoverContent>
             </Popover>
-            {/* Main nav */}
+            
             <div className="flex items-center gap-6">
               <a
                 href="/"
@@ -95,7 +95,7 @@ export default function NavbarComponent() {
                 <img className="w-10 h-10" src="/logo.png" alt="logo" />
               </a>
 
-              {/* Navigation menu */}
+       
               <NavigationMenu className="max-md:hidden">
                 <NavigationMenuList className="gap-2">
                   {navigationLinks.map((link, index) => (
@@ -113,7 +113,7 @@ export default function NavbarComponent() {
               </NavigationMenu>
             </div>
           </div>
-          {/* Right side */}
+     
           <div>
             <AuthDialog />
           </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { PhoneCall, Plug, MessageCircle, Settings } from "lucide-react";
+import { PhoneCall, MessageCircle, Settings, Calendar } from "lucide-react";
 
 interface BentoCardProps {
   title: string;
@@ -18,7 +18,9 @@ const BentoCard = ({
     <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 h-full flex flex-col">
       <div className="mb-4">{icon}</div>
       <h3 className={`${titleColor} text-xl font-semibold mb-2`}>{title}</h3>
-      <p className="text-gray-700 leading-relaxed mb-4 flex-grow">{description}</p>
+      <p className="text-gray-700 leading-relaxed mb-4 flex-grow">
+        {description}
+      </p>
     </div>
   );
 };
@@ -27,22 +29,26 @@ const BentoCards = () => {
   const cardsData = [
     {
       title: "Voice AI Agents",
-      description: "Create voice agents that sound natural and handle calls like a pro.",
+      description:
+        "Create smart voice agents that sound natural and handle calls like a pro.",
       icon: <PhoneCall className="w-8 h-8 text-violet-500" />,
     },
     {
-      title: "Easy Integration",
-      description: "Connect with your CRM and workflows seamlessly.",
-      icon: <Plug className="w-8 h-8 text-violet-500" />,
+      title: "Automated Scheduling",
+      description:
+        "Book meetings effortlessly with built-in AI scheduling and reminders.",
+      icon: <Calendar className="w-8 h-8 text-violet-500" />,
     },
     {
-      title: "Real-Time Chat",
-      description: "Instant, human-like conversations with zero delay.",
+      title: "Real-Time Conversations",
+      description:
+        "Engage prospects instantly with human-like voice interactions.",
       icon: <MessageCircle className="w-8 h-8 text-violet-500" />,
     },
     {
       title: "Fully Customizable",
-      description: "Design agents with custom scripts and voice styles.",
+      description:
+        "Personalize scripts, tone, and behavior to match your brand.",
       icon: <Settings className="w-8 h-8 text-violet-500" />,
     },
   ];

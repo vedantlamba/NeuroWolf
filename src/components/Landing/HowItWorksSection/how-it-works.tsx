@@ -47,12 +47,12 @@ const HowItWorksSection = () => {
           <p className="text-violet-500 text-sm font-medium tracking-wide uppercase mb-4">
             HOW IT WORKS
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-balance">
             Just 3 steps to get started
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center px-6">
           <div className="space-y-8">
             {steps.map((step, index) => (
               <div key={index} className="flex items-start space-x-4">

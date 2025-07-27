@@ -20,45 +20,31 @@ function Hero() {
         </div>
 
         <div className="text-center mb-6">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight max-w-4xl">
-            Automate your workflow with AI
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight max-w-4xl text-balance">
+            Build AI Voice Agents & Book Meetings Instantly
           </h1>
         </div>
 
-        <div className="text-center mb-8">
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            No matter what problem you have, our AI can help you solve it.
+        <div className="text-center mb-8 hidden md:block">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed text-balance">
+            Create smart voice agents that handle calls, schedule meetings, and
+            engage your customers — all in one platform.
           </p>
         </div>
+
         <div className="mb-8">
           <p className="mt-4 text-xs md:text-sm text-center text-primary font-medium bg-primary/10 rounded-lg px-4 py-2 inline-block text-balance ">
-             "Neurowolf AI is in development! Follow my progress on Twitter and
+            "Neurowolf AI is in development! Follow my progress on Twitter and
             explore this landing page for now."
           </p>
         </div>
 
         <div className="mb-4">
-          {/* <Button className="inline-flex items-center gap-2 px-8 py-4 text-base transition-all duration-200 cursor-pointer">
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
-            Get started for free
-          </Button> */}
           <SenjuButton>Get started for free</SenjuButton>
         </div>
 
         <div className="text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs md:text-sm text-muted-foreground">
             7 day free trial. No credit card required.
           </p>
         </div>

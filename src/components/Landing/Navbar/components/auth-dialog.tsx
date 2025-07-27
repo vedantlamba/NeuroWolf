@@ -27,7 +27,7 @@ function AuthDialog() {
 
   return (
     <Dialog>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 pr-1 md:pr-0">
         <DialogTrigger asChild>
           <Button variant="ghost" size="sm" className="text-sm cursor-pointer">
             Sign In

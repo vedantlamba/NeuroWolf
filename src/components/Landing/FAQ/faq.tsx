@@ -9,7 +9,7 @@ function Faqs() {
           <p className="text-violet-500 text-sm font-medium tracking-wide uppercase mb-4">
             FAQ
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-balance">
             Frequently asked questions
           </h2>
         </div>

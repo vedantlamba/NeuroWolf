@@ -43,13 +43,13 @@ function Testimonial() {
   if (!isMounted) return false;
 
   return (
-    <section className="py-16  bg-gray-50">
+    <section className="py-16  bg-neutral-100">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center">
           <p className="text-violet-500 text-sm font-medium tracking-wide uppercase mb-4">
             Testimonial Highlight
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-balance">
             What our customers are saying
           </h2>
         </div>
