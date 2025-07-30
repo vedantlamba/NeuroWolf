@@ -36,7 +36,7 @@ function DashboardUserButton() {
   }
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="rounded-lg border border-border/10 p-3 w-full flex items-center justify-between bg-violet-50 hover:bg-violet-100 overflow-hidden">
+      <DropdownMenuTrigger className="rounded-lg border border-border/10 p-3 w-full flex items-center justify-between overflow-hidden">
         {session?.user.image && (
           <Avatar>
             <AvatarImage src={session.user.image} />
@@ -49,11 +49,11 @@ function DashboardUserButton() {
         )}
         <div className="flex flex-col gap-0.5 text-left overflow-hidden flex-1 min-w-0 px-3">
           <p className="text-sm truncate w-full">{session?.user?.name}</p>
-          <p className="text-xs truncate w-full">{session?.user?.email}</p>
+          <p className="text-xs text-gray-400 truncate w-full">{session?.user?.email}</p>
         </div>
         <ChevronDown className="size-4 shrink-0 font-light" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" side="right" className="w-72">
+      <DropdownMenuContent align="end" side="right" className="w-72 ">
         <DropdownMenuLabel>
           <div className="flex flex-col gap-1">
             <span className="font-medium truncate">{session.user.name}</span>
@@ -68,7 +68,7 @@ function DashboardUserButton() {
           <CreditCard />
         </DropdownMenuItem>
         <DropdownMenuItem className="flex justify-center items-center">
-          <RainbowButton onClick={onSignOut} variant="outline">
+          <RainbowButton onClick={onSignOut}>
             Sign Out
           </RainbowButton>
         </DropdownMenuItem>
