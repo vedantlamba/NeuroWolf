@@ -18,9 +18,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Endless Scheduling Headaches",
+      title: "No One to Talk To When It Matters",
       description:
-        "Coordinating meetings takes forever.\nBack-and-forth emails waste time.\nLeads drop before you even talk.",
+        "People often need support or motivation.\nBut there's no one available.\nGeneric bots just don’t cut it.",
     },
     {
       icon: (
@@ -38,9 +38,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Scaling Human Interaction",
+      title: "No Way to Reconnect with AI",
       description:
-        "Your team can’t talk to everyone.\nMissed calls = missed revenue.\nYou need a way to engage 24/7.",
+        "Most AI chats vanish after one conversation.\nThere's no way to build a relationship.\nNo memory. No meetings. Just cold starts.",
     },
     {
       icon: (
@@ -58,9 +58,9 @@ const ProblemSection = () => {
           />
         </svg>
       ),
-      title: "Cold Conversations Kill Deals",
+      title: "One-Size Bots Don't Work",
       description:
-        "Generic emails don’t convert.\nProspects want real conversations.\nBut humans can’t scale like AI agents.",
+        "Every user has different needs.\nBut most AI tools offer no personality.\nYou can’t build your own agent that feels yours.",
     },
   ];
 
