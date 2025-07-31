@@ -47,7 +47,7 @@ function DashboardSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="text-sidebar-accent-foreground-foreground px-2">
+      <SidebarHeader className="text-sidebar-accent-foreground px-2">
         <Link href="/dashboard" className="flex items-center  gap-2 px-2 pt-4">
           <img src="/logo-white.png" alt="logo" className="w-9 h-9" />
         </Link>
