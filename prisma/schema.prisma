@@ -4,6 +4,8 @@
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
+
+
 generator client {
   provider = "prisma-client-js"
 }
@@ -23,6 +25,7 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
+  agents        Agents[]
 
   @@unique([email])
   @@map("user")
@@ -71,4 +74,18 @@ model Verification {
   updatedAt  DateTime?
 
   @@map("verification")
+}
+
+
+
+model Agents {
+  id String @id @default(cuid())
+  name String
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade )
+  instructions String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+
 }
