@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
@@ -23,7 +23,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { authClient } from "@/lib/auth-client";
-import { ChevronDown, CreditCard } from "lucide-react";
+import { Cat, ChevronDown, CreditCard } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import React from "react";
@@ -92,6 +92,9 @@ function DashboardUserButton() {
         {session?.user.image && (
           <Avatar>
             <AvatarImage src={session.user.image} />
+            <AvatarFallback>
+              <Cat className="text-black bg-white" />
+            </AvatarFallback>
           </Avatar>
         )}
         {!session?.user.image && (
