@@ -1,5 +1,6 @@
 import React from "react";
 import NormalDialog from "@/components/normal-dialog";
+import AgentsForm from "./agents-form";
 
 interface Props {
   open: boolean;
@@ -14,7 +15,10 @@ export function AgentDialog({ open, onOpenChange }: Props) {
       open={open}
       onOpenChange={onOpenChange}
     >
-      New Agent Form
+      <AgentsForm
+        onSuccess={() => onOpenChange(false)}
+        onCancel={() => onOpenChange(false)}
+      />
     </NormalDialog>
   );
 }

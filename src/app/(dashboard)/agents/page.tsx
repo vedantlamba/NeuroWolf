@@ -6,8 +6,17 @@ import { ErrorBoundary } from "react-error-boundary";
 import LoadingState from "@/components/loading-state";
 import ErrorState from "@/components/error-state";
 import ListHeader from "@/components/Agents/components/list-header";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-function AgentsPage() {
+async function AgentsPage() {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+  if (!session) {
+    redirect("/");
+  }
   const queryClient = getQueryClient();
   void queryClient.prefetchQuery(trpc.agents.getMany.queryOptions());
   return (

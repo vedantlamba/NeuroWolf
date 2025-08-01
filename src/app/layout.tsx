@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { TRPCReactProvider } from "../../trpc/client";
+import { Toaster } from "react-hot-toast";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -21,7 +22,12 @@ export default function RootLayout({
   return (
     <TRPCReactProvider>
       <html lang="en">
-        <body className={`${bricolage.className} antialiased`}>{children}</body>
+        <body className={`${bricolage.className} antialiased`}>
+          <div>
+            <Toaster />
+          </div>
+          {children}
+        </body>
       </html>
     </TRPCReactProvider>
   );
