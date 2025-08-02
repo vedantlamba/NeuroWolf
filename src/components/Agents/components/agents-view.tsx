@@ -5,6 +5,9 @@ import { useTRPC } from "../../../../trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import LoadingState from "@/components/loading-state";
 import ErrorState from "@/components/error-state";
+import { DataTable } from "./DataTable/data-table";
+import { columns } from "./DataTable/columns";
+import EmptyState from "./DataTable/empty-state";
 
 function AgentsView() {
   const trpc = useTRPC();
@@ -26,7 +29,12 @@ function AgentsView() {
       </div>
     );
   }
-  return <div> {JSON.stringify(data, null, 2)} </div>;
+  return (
+    <div className="flex-1 pb-4 px-4 md:px-8 flex flex-col gap-y-4">
+      <DataTable data={data} columns={columns} />{" "}
+      {data.length === 0 && <EmptyState error="Create Your First Agent" />}
+    </div>
+  );
 }
 
 export default AgentsView;

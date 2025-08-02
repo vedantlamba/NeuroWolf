@@ -84,6 +84,7 @@ model Agents {
   userId String
   user User @relation(fields: [userId], references: [id], onDelete: Cascade )
   instructions String
+  meetingCount  Int      @default(5)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
