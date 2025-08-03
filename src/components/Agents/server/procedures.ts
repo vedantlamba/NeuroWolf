@@ -52,7 +52,7 @@ export const agentsRouter = createTRPCRouter({
         },
         skip: (page - 1) * pageNum,
         take: pageNum,
-      });
+      }); 
 
       const total = await db.agents.count({
         where: {
