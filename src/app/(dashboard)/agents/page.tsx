@@ -18,7 +18,7 @@ async function AgentsPage() {
     redirect("/");
   }
   const queryClient = getQueryClient();
-  void queryClient.prefetchQuery(trpc.agents.getMany.queryOptions());
+  void queryClient.prefetchQuery(trpc.agents.getMany.queryOptions({pageNum: 4}));
   return (
     <>
       <ListHeader heading="Agents" buttonText="New Agent" />

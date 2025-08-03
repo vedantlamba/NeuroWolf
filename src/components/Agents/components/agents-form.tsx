@@ -38,7 +38,7 @@ function AgentsForm({ onSuccess, onCancel, initialValues }: Props) {
     trpc.agents.create.mutationOptions({
       onSuccess: async () => {
         toast.success("Agent Created Successfully");
-        await queryClient.invalidateQueries(trpc.agents.getMany.queryOptions());
+        await queryClient.invalidateQueries(trpc.agents.getMany.queryOptions({}));
         if (initialValues?.id) {
           await queryClient.invalidateQueries(
             trpc.agents.getOne.queryOptions({ id: initialValues.id })
