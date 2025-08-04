@@ -83,7 +83,7 @@ function DashboardSidebar() {
           <Separator className="opacity-30" />
         </div>
         <SidebarGroup>
-          <SidebarGroupContent className="relative p-4 rounded-md">
+          <SidebarGroupContent className="relative p-4 rounded-lg">
             <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
             <div className="px-3 py-2">
               <h4 className="text-xs font-semibold text-[--sidebar-accent-foreground] uppercase tracking-wider">

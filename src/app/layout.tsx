@@ -4,6 +4,8 @@ import "./globals.css";
 import { TRPCReactProvider } from "../../trpc/client";
 import { Toaster } from "react-hot-toast";
 
+import { NuqsAdapter } from "nuqs/adapters/next";
+
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -20,15 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <TRPCReactProvider>
-      <html lang="en">
-        <body className={`${bricolage.className} antialiased`}>
-          <div>
-            <Toaster />
-          </div>
-          {children}
-        </body>
-      </html>
-    </TRPCReactProvider>
+    <NuqsAdapter>
+      <TRPCReactProvider>
+        <html lang="en">
+          <body className={`${bricolage.className} antialiased`}>
+            <div>
+              <Toaster />
+            </div>
+            {children}
+          </body>
+        </html>
+      </TRPCReactProvider>
+    </NuqsAdapter>
   );
 }

@@ -2,8 +2,12 @@
 
 import React, { useState } from "react";
 import { RainbowButton } from "../../ui/rainbow-button";
-import { PlusIcon } from "lucide-react";
+import { PlusIcon, X } from "lucide-react";
 import { AgentDialog } from "./agent-dialog";
+import { useAgentFilters } from "../hooks/use-agents-filter";
+import { SearchFilter } from "./agent-search-filter";
+import { DEFAULT_PAGE } from "../../../../constants";
+import { Button } from "@/components/ui/button";
 
 interface Props {
   heading: string;
@@ -11,7 +15,18 @@ interface Props {
 }
 
 function ListHeader({ heading, buttonText }: Props) {
+  const [filters, setFilters] = useAgentFilters();
   const [open, setOpen] = useState(false);
+
+  const isAnyFilterModified = !!filters.search;
+
+  const onClearFilters = () => {
+    setFilters({
+      search: "",
+      page: DEFAULT_PAGE,
+    });
+  };
+
   return (
     <>
       <AgentDialog open={open} onOpenChange={setOpen} />
@@ -25,6 +40,17 @@ function ListHeader({ heading, buttonText }: Props) {
               <PlusIcon />
               {buttonText}
             </RainbowButton>
+          </div>
+        </div>
+        <div className="flex items-center gap-x-2 p-1">
+          <div className="flex gap-x-3 justify-between w-full md:justify-start">
+            <SearchFilter />
+            {isAnyFilterModified && (
+              <Button onClick={onClearFilters} className="cursor-pointer">
+                <X />
+                Clear
+              </Button>
+            )}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { useTRPC } from "../../../../trpc/client";
 import { useSuspenseQuery } from "@tanstack/react-query";
 import LoadingState from "@/components/loading-state";
@@ -8,11 +8,13 @@ import ErrorState from "@/components/error-state";
 import { DataTable } from "./DataTable/data-table";
 import { columns } from "./DataTable/columns";
 import EmptyState from "./DataTable/empty-state";
+import { useAgentFilters } from "../hooks/use-agents-filter";
 
 function AgentsView() {
+  const [filters, SetFilters] = useAgentFilters();
   const trpc = useTRPC();
   const { data, isLoading, isError } = useSuspenseQuery(
-    trpc.agents.getMany.queryOptions({pageNum: 4})
+    trpc.agents.getMany.queryOptions({ ...filters })
   );
 
   if (isLoading) {
