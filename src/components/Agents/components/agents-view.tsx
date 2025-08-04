@@ -9,6 +9,7 @@ import { DataTable } from "./DataTable/data-table";
 import { columns } from "./DataTable/columns";
 import EmptyState from "./DataTable/empty-state";
 import { useAgentFilters } from "../hooks/use-agents-filter";
+import { DataPagination } from "./data-pagination";
 
 function AgentsView() {
   const [filters, SetFilters] = useAgentFilters();
@@ -34,6 +35,11 @@ function AgentsView() {
   return (
     <div className="flex-1 pb-4 px-4 md:px-8 flex flex-col gap-y-4">
       <DataTable data={data.data} columns={columns} />{" "}
+      <DataPagination
+        page={filters.page}
+        totalPages={data.totalPages}
+        onPageChange={(page) => SetFilters({ page })}
+      />
       {data.data.length === 0 && <EmptyState error="Create Your First Agent" />}
     </div>
   );
