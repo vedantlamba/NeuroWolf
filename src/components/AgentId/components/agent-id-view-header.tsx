@@ -12,6 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+
 import {
   ChevronRightIcon,
   MoreVerticalIcon,
@@ -19,6 +20,7 @@ import {
   TrashIcon,
 } from "lucide-react";
 import Link from "next/link";
+
 import React from "react";
 
 interface Props {
@@ -34,6 +36,9 @@ export default function AgentIdViewHeader({
   onEdit,
   onRemove,
 }: Props) {
+
+
+
   return (
     <div className="flex items-center justify-between">
       <Breadcrumb>
@@ -64,7 +69,11 @@ export default function AgentIdViewHeader({
             <PencilIcon />
             Edit
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={onRemove} className="cursor-pointer">
+          <DropdownMenuItem
+            onClick={onRemove}
+            className="cursor-pointer"
+            variant="destructive"
+          >
             <TrashIcon />
             Delete
           </DropdownMenuItem>
