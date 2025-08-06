@@ -26,6 +26,7 @@ model User {
   sessions      Session[]
   accounts      Account[]
   agents        Agents[]
+  meetings Meetings[]
 
   @@unique([email])
   @@map("user")
@@ -83,10 +84,34 @@ model Agents {
   name String
   userId String
   user User @relation(fields: [userId], references: [id], onDelete: Cascade )
+  meetings Meetings[]
   instructions String
   meetingCount  Int      @default(5)
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
+}
 
+enum meetingStatus {
+  UPCOMING
+  ACTIVE
+  COMPLETED
+  PROCESSING
+  CANCELLED
+}
 
+model Meetings {
+  id        String         @id @default(cuid())
+  name      String
+  userId    String
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  agentId   String
+  agents    Agents         @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  status    meetingStatus  @default(UPCOMING)
+  transcriptUrl String?
+  recordingUrl  String?
+  summary String?
+  startedAt DateTime?    
+  endedAt DateTime?
+  createdAt DateTime       @default(now())
+  updatedAt  DateTime @updatedAt
 }
