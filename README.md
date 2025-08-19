@@ -2,11 +2,6 @@
   <img src="public/neurowolf.jpg" alt="Neurwolf Banner" width="800" />
 </p>
 
-<h1 align="center">🐺 Neurwolf</h1>
-<p align="center">
-  AI SaaS platform for creating agents, scheduling meetings, and having real-time AI voice conversations.
-</p>
-
 🐺 Neurwolf
 
 Neurwolf is an AI SaaS platform where users can subscribe, create custom AI agents with their own instructions, schedule meetings, and even hold voice calls with AI agents. Each meeting generates a transcript and more powerful features are coming soon.
@@ -24,6 +19,9 @@ Neurwolf is an AI SaaS platform where users can subscribe, create custom AI agen
 📝 Transcripts – full transcripts available after each call
 
 📬 More features coming soon...
+
+
+
 
 🛠️ Tech Stack
 
