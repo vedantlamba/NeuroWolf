@@ -1,25 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { MeetingGetOne } from "../types";
 import { useTRPC } from "../../../../trpc/client";
 import { useRouter } from "next/navigation";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "react-hot-toast";
+
 import {
   Form,
   FormControl,
+  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { createMeetingSchema } from "../schemas";
+import { CommandSelect } from "./command-select";
+import GeneratedAvatar from "@/components/generated-avatar";
+import { AgentDialog } from "@/components/Agents/components/agent-dialog";
 
 interface Props {
   onSuccess?: (id?: string) => void;
@@ -29,8 +34,19 @@ interface Props {
 
 function MeetingForm({ onSuccess, onCancel, initialValues }: Props) {
   const trpc = useTRPC();
-  const router = useRouter();
+
   const queryClient = useQueryClient();
+
+  const [openNewAgentDialog, setNewOpenAgentDialog] = useState(false);
+  const [agentSearch, setAgentSearch] = useState("");
+
+  const agents = useQuery(
+    trpc.agents.getMany.queryOptions({
+      search: agentSearch,
+      page: 1,
+      pageNum: 100,
+    })
+  );
 
   const createMeeting = useMutation(
     trpc.meetings.create.mutationOptions({
@@ -89,39 +105,93 @@ function MeetingForm({ onSuccess, onCancel, initialValues }: Props) {
   };
 
   return (
-    <Form {...form}>
-      <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
-        <FormField
-          name="name"
-          control={form.control}
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Name</FormLabel>
-              <FormControl>
-                <Input {...field} placeholder="e.g. Medication Consultations" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+    <>
+      <AgentDialog
+        open={openNewAgentDialog}
+        onOpenChange={setNewOpenAgentDialog}
+      />
+      <Form {...form}>
+        <form className="space-y-4" onSubmit={form.handleSubmit(onSubmit)}>
+          <FormField
+            name="name"
+            control={form.control}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Name</FormLabel>
+                <FormControl>
+                  <Input
+                    {...field}
+                    placeholder="e.g. Medication Consultations"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            name="agentId"
+            control={form.control}
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Agent</FormLabel>
+                <FormControl>
+                  <CommandSelect
+                    options={(agents?.data?.data ?? []).map((agent) => ({
+                      id: agent.id,
+                      value: agent.id,
+                      children: (
+                        <div className="flex items-center gap-x-2">
+                          <GeneratedAvatar
+                            name={agent.name}
+                            classname="size-5"
+                          />
+                          <span>{agent.name}</span>
+                        </div>
+                      ),
+                    }))}
+                    onSelect={field.onChange}
+                    onSearch={setAgentSearch}
+                    value={field.value}
+                    placeholder="Select an agent!"
+                  />
+                </FormControl>
+                <FormDescription className="text-xs pt-3 text-balance">
+                  Not found what you&apos;re looking for?{" "}
+                  <button
+                    type="button"
+                    className="text-primary hover:underline cursor-pointer"
+                    onClick={() => setNewOpenAgentDialog(true)}
+                  >
+                    Create New Agent
+                  </button>
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        <div className="flex justify-between items-center">
-          {onCancel && (
+          <div className="flex justify-between items-center">
+            {onCancel && (
+              <Button
+                variant="outline"
+                disabled={isPending}
+                onClick={() => onCancel()}
+                className="cursor-pointer"
+              >
+                Cancel
+              </Button>
+            )}
             <Button
-              variant="outline"
               disabled={isPending}
-              onClick={() => onCancel()}
+              type="submit"
               className="cursor-pointer"
             >
-              Cancel
+              {isEdit ? "Update" : "Create"}
             </Button>
-          )}
-          <Button disabled={isPending} type="submit" className="cursor-pointer">
-            {isEdit ? "Update" : "Create"}
-          </Button>
-        </div>
-      </form>
-    </Form>
+          </div>
+        </form>
+      </Form>
+    </>
   );
 }
 
