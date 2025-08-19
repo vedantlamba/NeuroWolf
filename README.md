@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="public/neurowolf.jpg" alt="Neurwolf Banner" width="800" />
+</p>
 
-## Getting Started
+<h1 align="center">🐺 Neurwolf</h1>
+<p align="center">
+  AI SaaS platform for creating agents, scheduling meetings, and having real-time AI voice conversations.
+</p>
 
-First, run the development server:
+🐺 Neurwolf
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Neurwolf is an AI SaaS platform where users can subscribe, create custom AI agents with their own instructions, schedule meetings, and even hold voice calls with AI agents. Each meeting generates a transcript and more powerful features are coming soon.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔑 Authentication & Subscriptions – powered by BetterAuth & integrated payment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🤖 AI Agents – create and manage custom AI agents with your own instructions
 
-## Learn More
+📅 Meeting Scheduling – schedule 1:1 meetings with your AI agents
 
-To learn more about Next.js, take a look at the following resources:
+🎙️ Voice Calls with AI – real-time voice conversations with agents
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📝 Transcripts – full transcripts available after each call
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📬 More features coming soon...
 
-## Deploy on Vercel
+🛠️ Tech Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+⚡ Next.js 14 – React framework for production apps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🟦 TypeScript – type safety everywhere
+
+🎨 Tailwind CSS – utility-first styling
+
+🔌 tRPC – fully typesafe API layer
+
+🗂️ Prisma – ORM for database modeling
+
+🟢 Neon DB – Postgres on the cloud
+
+🔐 BetterAuth – authentication & session management
+
+🧠 OpenAI API – powering the AI agents & conversations
+
+🌀 nuqs – query state management
