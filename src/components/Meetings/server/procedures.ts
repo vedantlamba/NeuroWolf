@@ -22,7 +22,10 @@ export const meetingsRouter = createTRPCRouter({
       });
 
       if (!existingMeeting) {
-        throw new TRPCError({ code: "NOT_FOUND", message: "Meeting Not Found!" });
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: "Meeting Not Found!",
+        });
       }
 
       const updatedMeeting = await db.meetings.update({
@@ -94,9 +97,23 @@ export const meetingsRouter = createTRPCRouter({
             },
           }),
         },
+        include: {
+          agents: true,
+        },
         skip: (page - 1) * pageNum,
         take: pageNum,
       });
+
+      // With Duration
+      const dataWithDuration = data.map((meeting) => ({
+        ...meeting,
+        duration:
+          meeting.endedAt && meeting.startedAt
+            ? (new Date(meeting.endedAt).getTime() -
+                new Date(meeting.startedAt).getTime()) /
+              1000
+            : null,
+      }));
 
       const total = await db.meetings.count({
         where: {
@@ -107,7 +124,7 @@ export const meetingsRouter = createTRPCRouter({
       const totalPages = Math.ceil(total / pageNum);
 
       return {
-        data,
+        data: dataWithDuration,
         total: total,
         totalPages,
       };
